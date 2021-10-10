@@ -51,20 +51,20 @@ namespace freecam
             bool inAGame = InGame.instance != null && InGame.instance.bridge != null;
             if (inAGame)
             {
-                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.W))
+                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.UpArrow))
                 {
                     InGame.instance.sceneCamera.orthographicSize -= 0.3f;//.transform.position += InGame.instance.sceneCamera.transform.forward*5;//new UnityEngine.Vector3(0, 0, 5);
                 }
-                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.S))
+                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.DownArrow))
                 {
                     InGame.instance.sceneCamera.orthographicSize += 0.3f;//.transform.position += InGame.instance.sceneCamera.transform.forward * -5;//new UnityEngine.Vector3(0, 0, -5);
                 }
-                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.A))
+                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.LeftArrow))
                 {
                     if (InGame.instance.sceneCamera.transform.position == new UnityEngine.Vector3(0, 0, 0)) InGame.instance.sceneCamera.transform.position = new UnityEngine.Vector3(5, 5, 5);
                     InGame.instance.sceneCamera.transform.position += InGame.instance.sceneCamera.transform.right * -0.2f;//new UnityEngine.Vector3(5, 0, 0);
                 }
-                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.D))
+                if (UnityEngine.Input.GetKey(UnityEngine.KeyCode.RightArrow))
                 {
                     if (InGame.instance.sceneCamera.transform.position == new UnityEngine.Vector3(0, 0, 0)) InGame.instance.sceneCamera.transform.position = new UnityEngine.Vector3(5, 5, 5);
                     InGame.instance.sceneCamera.transform.position += InGame.instance.sceneCamera.transform.right * 0.2f; //new UnityEngine.Vector3(-5, 0, 0);
